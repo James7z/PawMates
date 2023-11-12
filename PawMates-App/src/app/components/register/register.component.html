@@ -1,0 +1,155 @@
+<section class="vh-100">
+    <div class="container-fluid">
+      <div class="row">
+
+        <div class="col-sm-6 px-0 d-none d-sm-block">
+            <img src="../../assets/cats.jpg"
+              alt="Login image" class="w-100 vh-100" style="object-fit: cover; object-position: left;">
+          </div>
+
+
+        <div class="col-sm-6 text-black">   
+          <div class="px-5 ms-xl-4">
+            <i class="fa fa-paw fa-2x me-3 pt-5 mt-xl-4" style="color: #490A3D;"></i>
+            <span class="h1 fw-bold mb-0">PawMates</span>
+          </div>
+  
+          <div class="d-flex align-items-center pt-4 px-5 ms-xl-4">
+  
+            <form style="width: 36rem;">
+  
+              <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="d-flex flex-row align-items-center justify-content-center justify-content-lg-start mb-4">
+                  <p class="lead fw-normal mb-0 me-3">Create account</p>
+                </div>
+    
+               
+                <div class="input-group">
+                     <!-- First Name input -->
+                    <mdb-form-control>
+                        <div class="form-outline mb-4">
+                            <input mdbInput id="firstName" class="form-control"
+                                placeholder="Enter your First Name"
+                                [(ngModel)]="registerModel.firstName" 
+                                name="firstName">
+                            <label mdbLabel class="form-label" for="firstName" >First Name</label>
+                        </div>
+                    </mdb-form-control>
+                    <!-- Last Name input -->
+                    <mdb-form-control>
+                        <div class="form-outline mb-4">
+                            <input mdbInput id="lastName" class="form-control"
+                                placeholder="Enter your Last Name" 
+                                [(ngModel)]="registerModel.lastName" 
+                                name="lastName"/>
+                            <label mdbLabel class="form-label" for="lastName" >Last Name</label>
+                        </div>
+                    </mdb-form-control>
+                </div>
+                <!-- Email input -->
+                <div class="input-group">
+                <mdb-form-control>
+                    <div class="form-outline mb-4">
+                        <input mdbInput type="email" id="email" class="form-control"
+                            placeholder="Enter your Email" [(ngModel)]="registerModel.email" 
+                            name="email"/>
+                        <label mdbLabel class="form-label" for="email" >Email</label>
+                    </div>
+                </mdb-form-control>
+                <!-- Phone Number input -->
+                <mdb-form-control>
+                    <div class="form-outline mb-4">
+                        <input mdbInput type="tel" id="phoneNumber" class="form-control"
+                            placeholder="Enter your Phone Number" [(ngModel)]="registerModel.phoneNumber" 
+                            name="phone"/>
+                        <label mdbLabel class="form-label" for="phoneNumber" >Phone Number</label>
+                    </div>
+                </mdb-form-control>
+            </div>
+                <!-- Profile Image URL -->
+                <mdb-form-control>
+                    <div class="form-outline mb-4">
+                        <input mdbInput type="url" id="imageUrl" class="form-control"
+                            placeholder="Enter Image URL for Profile" [(ngModel)]="registerModel.profileImageURL" 
+                            name="imageUrl"/>
+                        <label mdbLabel class="form-label" for="imageUrl" >Profile Image URL</label>
+                    </div>
+                </mdb-form-control>
+                <!-- Description Text Area -->
+                <mdb-form-control >
+                    <div class="form-outline mb-4">
+                        <textarea mdbInput id="description" class="form-control"
+                            placeholder="Enter your Profile Description" [(ngModel)]="registerModel.description" 
+                            name="description" rows="3"></textarea>
+                        <label mdbLabel class="form-label" for="imageUrl" >About Me</label>
+                    </div>
+                </mdb-form-control>
+                <div class="row mb-4">
+                    <!-- City -->
+                    <mdb-form-control class="col-md-4">
+                        <div class="form-outline">
+                            <input mdbInput id="city" class="form-control"
+                                placeholder="Enter your City" 
+                                [(ngModel)]="registerModel.city" 
+                                name="city"/>
+                            <label mdbLabel class="form-label" for="city" >City</label>
+                        </div>
+                    </mdb-form-control>
+                    <!-- State -->
+                <mdb-form-control class="col-md-4">
+                    <div class="form-outline ">
+                        <input mdbInput id="state" class="form-control"
+                            placeholder="Enter your State" 
+                            [(ngModel)]="registerModel.state" 
+                            name="state"/>
+                        <label mdbLabel class="form-label" for="state" >State</label>
+                    </div>
+                </mdb-form-control>
+                <!-- Postal Code -->
+                <mdb-form-control  class="col-md-4">
+                    <div class="form-outline">
+                        <input mdbInput id="postalCode" class="form-control"
+                            placeholder="Enter your Postal Code" 
+                            [(ngModel)]="registerModel.postalCode" 
+                            name="postalCode"/>
+                        <label mdbLabel class="form-label" for="postalCode" >Postal Code</label>
+                    </div>
+                </mdb-form-control>
+                </div>
+                
+
+                <!-- Username input -->
+                <mdb-form-control>
+                    <div class="form-outline mb-4">
+                        <input mdbInput id="username" class="form-control"
+                            placeholder="Enter a valid username" [(ngModel)]="registerModel.userName" 
+                            name="username"/>
+                        <label mdbLabel class="form-label" for="username" >Username</label>
+                    </div>
+                </mdb-form-control>
+                <!-- Password input -->
+                <mdb-form-control>
+                    <div class="form-outline mb-4">
+                        <input mdbInput type="password" id="password" class="form-control"
+                            placeholder="Enter a password" [(ngModel)]="registerModel.password" 
+                            name="password"/>
+                        <label mdbLabel class="form-label" for="password" >Password</label>
+                    </div>
+                </mdb-form-control>
+            
+      
+                <div class="text-center text-lg-start mt-4 pt-2">
+                  <button id="button" type="button" class="btn register-button btn-lg"
+                    style="padding-left: 2.5rem; padding-right: 2.5rem;" (click)="register()">Register</button>
+                </div>
+                
+            </div>
+            <p style="margin-top: 20px;">Have an account? <a routerLink="/login" class="link-info">Login here</a></p>
+            </form>
+  
+          </div>
+  
+        </div>
+      </div>
+    </div>
+  </section>

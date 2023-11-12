@@ -1,0 +1,29 @@
+#pet {
+    height: 350px;
+    object-fit: cover;
+}
+#pfp {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    object-position: 100% 0;
+}
+#accent {
+    background-color: #490A3D;
+    border-color: #490A3D;
+}
+
+#accentoutline, a {
+    border-color: #490A3D;
+    color: #490A3D;
+}
+
+#accentoutline:hover {
+    background-color: #490A3D;
+    border-color: #490A3D;
+    color: white;
+}
+
+#form-row {
+    margin-top: 25px;
+}
