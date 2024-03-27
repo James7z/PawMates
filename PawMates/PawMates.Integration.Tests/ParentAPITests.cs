@@ -261,18 +261,20 @@ namespace PawMates.Integration.Tests
         public async Task ShouldAddPetToParent()
         {
             //Arrange
-           
+            int id = 999;
+            var expected = HttpStatusCode.NotFound;
             //Act
-           
+
             //Assert
-            
+
         }
 
         [Test]
         public async Task ShouldNotAddPetToParent()
         {
             //Arrange
-
+            int id = 999;
+            var expected = HttpStatusCode.NotFound;
             //Act
 
             //Assert
