@@ -273,6 +273,21 @@ namespace PawMates.Integration.Tests
         }
 
         [Test]
+        public async Task ShouldNotAddPetToParentWithoutId()
+        {
+            //Arrange
+            int id = 999;
+            var expected = HttpStatusCode.NotFound;
+            //Act
+            var content = new StringContent(JsonConvert.SerializeObject(expected), Encoding.UTF8, "application/json");
+            var response = await _client.PutAsync($"/api/parents/{id}", content);
+            var responseContent = await response.Content.ReadAsStringAsync();
+            var actual = JsonConvert.DeserializeObject<PetParentDTO>(responseContent);
+            //Assert
+
+        }
+
+        [Test]
         public async Task ShouldNotAddPetToParent()
         {
             //Arrange
