@@ -404,5 +404,20 @@ namespace PawMates.Integration.Tests
             //Assert
 
         }
+
+        [Test]
+        public async Task ShouldNotDeletePetFromParentWithoutParentName()
+        {
+            //Arrange
+            int id = 999;
+            var expected = HttpStatusCode.NotFound;
+            CancellationTokenSource source = new CancellationTokenSource();
+            CancellationToken cancelToken = source.Token;
+            //Act
+            var response = await _client.DeleteAsync($"/api/parents/{id}", cancelToken);
+            var actual = response.StatusCode;
+            //Assert
+
+        }
     }
 }
