@@ -297,6 +297,19 @@ namespace PawMates.Integration.Tests
         }
 
         [Test]
+        public async Task ShouldNotDeletePetWithoutId()
+        {
+            // Arrange
+            var client = _factory.CreateClient();
+
+            // Act
+            var response = await client.DeleteAsync("/api/pets/1");
+
+            // Assert
+            
+        }
+
+        [Test]
         public async Task DeletePet_ReturnsNotFound()
         {
             // Arrange
